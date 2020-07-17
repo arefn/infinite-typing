@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Typing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Dark version -->
+    <div class="dark">
+        <button class="" id="darkButton">dark mode</button>
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+        <div class="info">
+            <div class="">words:
+                <span id="wordsNumbers"></span>
+            </div>
+            <div class="">time:
+                <span id="minutes"></span>:<span id="seconds"></span>
+            </div>
+        </div>
+        <h2 id="current-word"></h2>
+        <input type="text" id="word-input" placeholder="start typing ..." autofocus>
+    </div>
+
+    <!-- *** -->
+    <script src="Words/en.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

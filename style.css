@@ -1,0 +1,151 @@
+*,
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    -webkit-transition: 400ms all;
+    -o-transition: 400ms all;
+    transition: 400ms all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0
+}
+
+/**/
+
+.ch-correct {
+    color: #48BB78;
+}
+
+.ch-incorrect {
+    color: #F56565;
+}
+
+.bg-corrent {
+    background: #C6F6D5;
+}
+
+.bg-incorrect {
+    background: #FED7D7;
+}
+
+/**/
+
+.dark {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.dark button {
+    padding: 0.5rem 1rem;
+    background: white;
+    color: #4A5568;
+    border: 1px solid #4A5568;
+}
+
+/**/
+
+.container {
+    border: 1px solid #1A202C;
+}
+
+.info {
+    border-bottom: 1px solid #1A202C;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.info>* {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 0.25rem 0.5rem;
+    border-right: 1px solid #1A202C;
+}
+
+.info>*:last-child {
+    border-right: 0;
+}
+
+#current-word {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: lighter;
+    padding: 4rem 6rem;
+}
+
+#word-input {
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    border: 0;
+    border-top: 1px solid #1A202C;
+    padding: 0.5rem 1rem;
+    outline: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Dark Mode */
+.is-dark {
+    background: #121212;
+    color: #F7FAFC;
+}
+
+.is-dark .dark button {
+    background: #1A202C;
+    color: #E2E8F0;
+    border: 1px solid #E2E8F0;
+}
+
+.is-dark #word-input {
+    background: #121212;
+    color: #F7FAFC;
+}
+
+.is-dark #current-word {
+    color: #F7FAFC;
+}
+
+.is-dark .bg-corrent {
+    background: #22543D;
+}
+
+.is-dark .bg-incorrect {
+    background: #742A2A;
+}
