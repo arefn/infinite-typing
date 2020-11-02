@@ -1,16 +1,18 @@
 // Words : https://github.com/lorenbrichter/Words/blob/master/Words/en.txt
 
+// run script after page load
 window.addEventListener('load', init);
 
+// Variables
 let score;
 let sec = 0;
 
-// DOM Element
+// DOM Elements
 const wordInput = document.querySelector("#word-input");
 const currentWord = document.querySelector("#current-word");
 const typeTimer = document.querySelector("#type-timer");
 
-// dark
+// dark version
 document.querySelector("#darkButton").addEventListener("click", () => {
     document.body.classList.toggle('is-dark');
 });
@@ -24,7 +26,6 @@ let startTimer = (function () {
     return function () {
         if (!executed) {
             executed = true;
-            // do something
             setInterval(function () {
                 document.querySelector("#seconds").innerHTML = pad(++sec % 60);
                 document.querySelector("#minutes").innerHTML = pad(parseInt(sec / 60, 10));
@@ -33,6 +34,7 @@ let startTimer = (function () {
     };
 })();
 
+// main function
 function init() {
     score = 0;
 
