@@ -11,9 +11,13 @@ let sec = 0;
 const wordInput = document.querySelector("#word-input");
 const currentWord = document.querySelector("#current-word");
 const typeTimer = document.querySelector("#type-timer");
+const darkButton = document.querySelector("#darkButton");
+const timerSeconds = document.querySelector("#seconds");
+const timerMinutes = document.querySelector("#minutes");
+const wordsNumber = document.querySelector("#wordsNumbers");
 
 // dark version
-document.querySelector("#darkButton").addEventListener("click", () => {
+darkButton.addEventListener("click", () => {
     document.body.classList.toggle('is-dark');
 });
 
@@ -27,8 +31,8 @@ let startTimer = (function () {
         if (!executed) {
             executed = true;
             setInterval(function () {
-                document.querySelector("#seconds").innerHTML = pad(++sec % 60);
-                document.querySelector("#minutes").innerHTML = pad(parseInt(sec / 60, 10));
+                timerSeconds.innerHTML = pad(++sec % 60);
+                timerMinutes.innerHTML = pad(parseInt(sec / 60, 10));
             }, 1000);
         }
     };
@@ -76,7 +80,7 @@ function init() {
             i = wordInput.value.length -= 1;
             // score
             score++;
-            document.querySelector("#wordsNumbers").textContent = score;
+            wordsNumber.textContent = score;
             // new word
             currentWord.textContent = "";
             wordInput.value = "";
