@@ -2,8 +2,8 @@
 
 window.addEventListener('load', init);
 
-var score;
-var sec = 0;
+let score;
+let sec = 0;
 
 // DOM Element
 const wordInput = document.querySelector("#word-input");
@@ -19,8 +19,8 @@ document.querySelector("#darkButton").addEventListener("click", () => {
 function pad(val) {
     return val > 9 ? val : "0" + val;
 }
-var startTimer = (function () {
-    var executed = false;
+let startTimer = (function () {
+    let executed = false;
     return function () {
         if (!executed) {
             executed = true;
@@ -36,8 +36,8 @@ var startTimer = (function () {
 function init() {
     score = 0;
 
-    var currentArray = Math.floor(Math.random() * words.length);
-    var sectionWord = words[currentArray];
+    let currentArray = Math.floor(Math.random() * words.length);
+    let sectionWord = words[currentArray];
     for (let x in words[currentArray]) {
         let spanElement = document.createElement("span");
         let spanContent = document.createTextNode(sectionWord[x]);
@@ -47,8 +47,8 @@ function init() {
 
     // Input Event Listener
     wordInput.addEventListener('input', () => {
-        var i = wordInput.value.length -= 1;
-        var sectionWord = words[currentArray];
+        let i = wordInput.value.length -= 1;
+        let sectionWord = words[currentArray];
 
         // timer
         startTimer();
